@@ -119,6 +119,11 @@ namespace user_imput_assigment
             double price1;
             double price2;
             double subtotal;
+            double pricedis;
+            double discountprice;
+            double tax;
+            double total;
+            
 
 
             Console.WriteLine("what two items whould you like?");
@@ -133,6 +138,36 @@ namespace user_imput_assigment
             double.TryParse(Console.ReadLine(), out price2);
             subtotal = price1 + price2;
             Console.WriteLine(" The total of the two will be " + subtotal.ToString("C"));
+            pricedis = subtotal * 0.2;
+            discountprice = subtotal - pricedis;
+            Console.WriteLine(" Your total with the discount will be " + discountprice.ToString("C"));
+            tax = discountprice * 0.13;
+            total = discountprice + tax;
+            Console.WriteLine(" Your final total today will be " + total.ToString("C"));
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+
+
+            Console.WriteLine("item1" + item1);
+            Console.WriteLine("item2" + item2);
+            Console.WriteLine("items 1's price" + price1);
+            Console.WriteLine("item 2's price" + price2);
+            Console.WriteLine("Subtotal  " + subtotal);
+            Console.WriteLine("=============================");
+            Console.WriteLine("Discount %20 " + pricedis);
+            Console.WriteLine("Subtotal " + subtotal);
+            Console.WriteLine("Tax " + tax);
+            Console.WriteLine(" Total " + total);
+
+
+
+
+
+
+
+
+
 
 
 
